@@ -71,3 +71,46 @@ url http://localhost:9999 로 접근
 -----------------------------------------------------------
 
 ### 2. 프로젝트(django_practices)에 Application 추가하기
+
+#### 1. Application들의 통합 template 디렉토리 templates 만들기
+1) 디렉토리 생성
+django_practices
+|--- templates
+   
+2) template 디렉토리 설정(settings.py)
+```python
+import os
+
+
+'DIRS': [os.path.join(BASE_DIR, 'templates')]
+```
+
+#### 2. helloworld application 만들기
+1) application 생성
+```shell
+(venv) # python manage.py startapp helloworld
+```
+
+2) application 등록(settings.py)
+```python
+INSTALLED_APPS = [
+    'helloworld',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+3) application의 template 디렉토리 생성
+django_practices
+|--- templates
+        |--- helloworld
+
+4) urls.py 에 URL 등록하고 views.py 에 요청 처리 함수만들고 template(html) 연결하고.....  (반복반복)
+
+
+
+
