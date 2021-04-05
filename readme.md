@@ -112,5 +112,31 @@ django_practices
 4) urls.py 에 URL 등록하고 views.py 에 요청 처리 함수만들고 template(html) 연결하고.....  (반복반복)
 
 
+#### 3. emailist01 application 만들기
+1) application 생성
+```shell
+(venv) # python manage.py startapp emaillist01
+```
 
+2) application 등록(settings.py)
+```python
+INSTALLED_APPS = [
+    'emaillist01'    
+    'helloworld',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+```
+
+3) application의 template 디렉토리 생성
+django_practices
+|--- templates
+        |--- helloworld
+        |--- emaillist01
+
+4) urls.py 에 URL 등록하고 views.py 에 요청 처리 함수만들고 template(html) 연결하고.....  (반복반복)
 
