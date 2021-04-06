@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'guestbook01',
     'emaillist01',
+    'emaillist02',
     'helloworld',
     'mathfilters',
     'django.contrib.admin',
