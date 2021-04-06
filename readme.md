@@ -169,3 +169,27 @@ django_practices
         |--- guestbook01
 
 4) urls.py 에 URL 등록하고 views.py 에 요청 처리 함수만들고 template(html) 연결하고.....  (반복반복)
+
+5) template filter 사용
+- linebreaksbr:    'aaaa\nbbbb'  --|->  'aaaa&lt;br&gt;bbbb'
+- mathfilters
+  1. 설치
+     ```shell
+        (venv) # pip install django-mathfilters
+     ```
+  2. 설정
+     ````python
+        INSTALLED_APPS = [
+     
+            'mathfilters',
+     
+        ]        
+     ````
+  3. 사용예
+     ```html
+        {% load mathfilters %}
+     
+        <p>
+            10 - 5 + 1 = {{ 10 | sub:5 | add:1 }}
+        </p>
+     ```
