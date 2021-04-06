@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'guestbook01',
+    'guestbook02',
     'emaillist01',
     'emaillist02',
     'helloworld',
